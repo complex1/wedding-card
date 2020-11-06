@@ -1,20 +1,23 @@
 <template>
   <div class="cover">
+    <div>
+      <img src="../assets/subh-vivah-logo.png" width="110px" style="display: block;margin: auto" alt="">
+    </div>
     <div class="cover-cont">
       <div>
         <div class=" family bride">
           <img class="n-elm n-ele-in-0 " src="../assets/groom-2.png" alt="">
-          <div class="">
+          <div class="fadeInLeft">
              <b>Mr. Viplaw Maurya</b>
              <br>
              <small>Mrs Kanti Maurya W/o Late Sh. Radhey Shyam Maurya</small>
           </div>
         </div>
       </div>
-      <img width="100px" style="margin: auto" src="../assets/subh-vivah.png" alt="">
+      <img width="100px" class="n-elm n-ele-in-0" style="margin: 10px auto;padding: 5px;border-radius: 8px;" src="../assets/subh-vivah.png" alt="">
       <div>
         <div class="family groom">
-          <div class="">
+          <div class="fadeInLeft">
              <b>Ms. Saloni Maurya</b>
              <br>
              <small>Daughter of Mr. & Mrs Madhuvan Maurya</small>

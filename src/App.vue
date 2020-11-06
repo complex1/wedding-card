@@ -1,8 +1,8 @@
 <template>
   <div id="app" class="light" @click="change">
-    <div>
+    <transition name="component-fade" mode="out-in">
       <component :is="page[pi]"/>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -11,23 +11,25 @@ import landing from './components/landing'
 import cover from './components/cover'
 import invitation from './components/invitation'
 import events from './components/events'
+import people from './components/people'
 export default {
   name: 'App',
   components: {
     landing,
     cover,
     invitation,
-    events
+    events,
+    people
   },
   data () {
     return {
-      page: ['landing', 'invitation', 'cover', 'events'],
+      page: ['landing', 'invitation', 'cover', 'events', 'people'],
       pi: 0
     }
   },
   methods: {
     change () {
-      const range = 4
+      const range = 5
       this.pi++
       if (this.pi === range) {
         this.pi = 0
@@ -55,9 +57,17 @@ body {
   padding: 125px 0px;
   height: auto;
   min-height: 100%;
+  overflow-x: auto;
 }
 #app > div {
-  // height: calc(100% - 250px);
   height: 100%;
+}
+
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s ease;
+}
+.component-fade-enter, .component-fade-leave-to
+/* .component-fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

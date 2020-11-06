@@ -6,7 +6,7 @@
       </div>
       <div class="weds curve">
         <p class="nm" style="text-align: left;">Viplaw</p>
-        <p class="nm" style="text-align: center; font-size: 18px; color: #4361ee">with</p>
+        <p class="nm" style="text-align: center; font-size: 18px; color: #4361ee">weds</p>
         <p class="nm" style="text-align: right">Saloni</p>
       </div>
     </div>
