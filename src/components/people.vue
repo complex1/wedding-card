@@ -14,6 +14,12 @@
       <h3 class="nm">विशेष आग्रह</h3>
       <p>Dheeraj, Sanidhya, Satvik</p>
     </div>
+    <small>
+        <b>
+          Designed BY:
+        </b>
+        <span class="curve">Shubham Maurya</span>
+    </small>
   </div>
 </template>
 
@@ -39,6 +45,11 @@ export default {
     padding: 5px 15px;
     color: #1a4487;
     // font-weight: bold;
+  }
+  small {
+    position: absolute;
+    bottom: 200px;
+    right: 20px;
   }
 }
 </style>

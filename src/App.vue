@@ -26,7 +26,7 @@ export default {
   },
   data () {
     return {
-      page: ['landing', 'invitation', 'cover', 'events', 'people'],
+      page: ['landing', 'cover', 'events', 'invitation', 'people'],
       pi: 0,
       isOpen: true
     }
@@ -58,12 +58,9 @@ html {
 }
 body {
   height: 100%;
-  background-image: url('./assets/flower-2.png');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .notification {
-  position: fixed;
+  position: absolute;
   width: 150px;
   top: 15px;
   right: 15px;
@@ -77,20 +74,26 @@ body {
   z-index: 10;
 }
 #app {
+  position: relative;
+  max-width: 500px;
+  margin: auto;
   padding: 125px 0px;
   height: auto;
   min-height: 100%;
   overflow-x: auto;
+  background-image: url('./assets/flower-2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 2px 2px 8px grey, -2px -2px 8px white;
 }
 #app > div {
   height: 100%;
 }
 
 .component-fade-enter-active, .component-fade-leave-active {
-  transition: opacity .3s ease;
+  transition: transform .3s ease;
 }
-.component-fade-enter, .component-fade-leave-to
-/* .component-fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
+.component-fade-enter, .component-fade-leave-to {
+  transform: rotateY(-90deg);;
 }
 </style>
