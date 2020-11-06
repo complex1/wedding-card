@@ -1,0 +1,245 @@
+@import './vars.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+
+html,body {
+  padding: 0px;
+  margin: 0px;
+  background-color: $light-base;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+*:focus {
+  outline: none;
+}
+* {
+  letter-spacing: 1px;
+  box-sizing: border-box;
+}
+
+.n-app {
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+}
+
+.block {
+  display: block;
+}
+
+.np {
+  padding: 0px;
+}
+.nm {
+  margin: 0px;
+}
+
+.light {
+  color: $text-color;
+  .xs {
+    font-size: 12px;
+  }
+  .s {
+    font-size: 14px;
+  }
+  .m {
+    font-size: 16px;
+  }
+  .l {
+    font-size: 18px;
+  }
+  .xl {
+    font-size: 22px;
+  }
+  &.n-app {
+    background-color: $light-base;
+  }
+  .n-elm {
+    background-color: $light-base;
+    &.n-ele-0{
+      box-shadow: inset 5px 5px 5px #b7b7b7, inset -5px -5px 4px #ffffff94;
+    }
+    &.n-ele-1 {
+      box-shadow:  8px 8px 16px #b7b7b7, -8px -8px 16px #ffffff94;
+    }
+    &.n-ele-2 {
+      box-shadow:  12px 12px 13px #c5c5c5, -12px -12px 13px #ffffff94;
+    }
+    &.n-ele-3 {
+      box-shadow:  10px 10px 20px #949494, -10px -10px 20px #ffffff94;
+    }
+    &.n-ele-4 {
+      box-shadow:  12px 12px 24px #585858, -12px -12px 24px #ffffff94;
+    }
+
+    &.n-ele-in-0{
+      box-shadow: inset 5px 5px 5px #b7b7b7, inset -5px -5px 4px #ffffff94;
+    }
+    &.n-ele-in-1 {
+      box-shadow: inset 8px 8px 16px #b7b7b7, inset -8px -8px 16px #ffffff94;
+    }
+    &.n-ele-in-2 {
+      box-shadow: inset 12px 12px 13px #c5c5c5, inset -12px -12px 13px #ffffff94;
+    }
+    &.n-ele-in-3 {
+      box-shadow: inset 10px 10px 20px #949494, inset -10px -10px 20px #ffffff94;
+    }
+    &.n-ele-in-4 {
+      box-shadow: inset 12px 12px 24px #585858, inset -12px -12px 24px #ffffff94;
+    }
+
+    &.n-text-0{
+      background-clip: text;
+      font-weight: 900;
+      font-family: 'Montserrat', sans-serif;
+      color: $light-base;
+      text-shadow:  8px 8px 16px #c9c9c9,  -8px -8px 16px #ffffff94;
+    }
+    &.n-text-1 {
+      font-weight: 900;
+      font-family: 'Montserrat', sans-serif;
+      color: $light-base;
+      text-shadow:  8px 8px 16px #b7b7b7, -8px -8px 16px #ffffff94;
+    }
+    &.n-text-2 {
+      font-weight: 900;
+      font-family: 'Montserrat', sans-serif;
+      color: $light-base;
+      text-shadow:  12px 12px 13px #c5c5c5, -12px -12px 13px #ffffff94;
+    }
+    &.n-text-3 {
+      font-weight: 900;
+      font-family: 'Montserrat', sans-serif;
+      color: $light-base;
+      text-shadow:  10px 10px 20px #949494, -10px -10px 20px #ffffff94;
+    }
+    &.n-text-4 {
+      font-weight: 900;
+      color: $light-base;
+      text-shadow:  12px 12px 24px #585858, -12px -12px 24px #ffffff94;
+    }
+  }
+  .n-btn {
+    background-color: $light-base;
+    padding: 0.65em 1em;
+    border: 0px solid;
+    box-shadow: 5px 5px 5px #b7b7b7, -5px -5px 5px #ffffff82;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    &-pill {
+      border-radius: 2em;
+    }
+    &-in {
+      box-shadow: inset 5px 5px 5px #b7b7b7, inset -5px -5px 4px #ffffff94;
+    }
+  }
+  .n-avt {
+    color: $text-color;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px #b7b7b7, -5px -5px 5px #ffffff82;
+    height: 2.5em;
+    width: 2.5em;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    &-in {
+      box-shadow: inset 5px 5px 5px #b7b7b7, inset -5px -5px 4px #ffffff94;
+    }
+  }
+  .n-alert {
+    padding: 1rem 2.5rem;
+    box-shadow: 5px 5px 12px #585858, -5px -5px 12px #ffffff94;
+    border-radius: 8px;
+    border-left: 6px solid;
+    letter-spacing: 1px;
+    &-in {
+      box-shadow: inset 5px 5px 5px #585858, inset -5px -5px 5px #ffffff94;
+    }
+    &-danger {
+      border-color: $danger;
+    }
+    &-warning {
+      border-color: $warning;
+    }
+    &-success {
+      border-color: $success;
+    }
+    &-info {
+      border-color: $info;
+    }
+  }
+  .n-input {
+    color: $text-color;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    letter-spacing: 1px;
+    border: 0px solid;
+    box-shadow: inset 4px 4px 4px #b7b7b7, inset -4px -4px 4px #ffffff94;
+    border-radius: 0.5em;
+    background: transparent;
+    &::placeholder {
+      opacity: 0.6;
+    }
+  }
+  [type="checkbox"].n-input {
+    box-shadow: 8px 8px 16px #b7b7b7, -8px -8px 16px #ffffff94;
+  }
+  .n-wrap-input {
+    display: flex;
+    align-items: center;
+    padding: 1em 0em;
+    padding-right: 1em;
+    box-shadow: 5px 5px 5px #b7b7b7, -5px -5px 5px #ffffff82;
+    border-radius: 8px;
+    .title {
+      padding: 0em 1em;
+      .title::before {
+        position: absolute;
+        height: 100%;
+        right: 100%;
+        width: 2px;
+        background-color: black;
+      }
+    }
+    input {
+      flex-grow: 1;
+      color: $text-color;
+      font-size: 1em;
+      padding: 0.5em 1em;
+      letter-spacing: 1px;
+      border: 0px solid;
+      box-shadow: inset 4px 4px 4px #b7b7b7, inset -4px -4px 4px #ffffff94;
+      border-radius: 0.5em;
+      background: transparent;
+    }
+  }
+
+  .n-wrap-in {
+    box-shadow: inset 5px 5px 5px #b7b7b7, inset -5px -5px 4px #ffffff94;
+  }
+
+  input[type=range]::-moz-range-thumb {
+    background-color: green;
+  }
+}
+
+
+span.ripple {
+  position: absolute; /* The absolute position we mentioned earlier */
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
