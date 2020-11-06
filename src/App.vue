@@ -1,5 +1,8 @@
 <template>
   <div id="app" class="light" @click="change">
+    <div v-if="!isOpen" class="notification">
+      Tab on the screen to switch the page
+    </div>
     <transition name="component-fade" mode="out-in">
       <component :is="page[pi]"/>
     </transition>
@@ -24,17 +27,23 @@ export default {
   data () {
     return {
       page: ['landing', 'invitation', 'cover', 'events', 'people'],
-      pi: 0
+      pi: 0,
+      isOpen: true
     }
   },
   methods: {
     change () {
+      this.isOpen = true
       const range = 5
       this.pi++
       if (this.pi === range) {
         this.pi = 0
       }
     }
+  },
+  mounted () {
+    this.isOpen = localStorage.getItem('isOpen')
+    localStorage.setItem('isOpen', true)
   }
 }
 </script>
@@ -52,6 +61,20 @@ body {
   background-image: url('./assets/flower-2.png');
   background-repeat: no-repeat;
   background-size: cover;
+}
+.notification {
+  position: fixed;
+  width: 150px;
+  top: 15px;
+  right: 15px;
+  height: auto !important;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px grey;
+  background-color: #22224a;
+  color: white;
+  z-index: 10;
 }
 #app {
   padding: 125px 0px;
