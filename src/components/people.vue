@@ -47,9 +47,7 @@ export default {
     // font-weight: bold;
   }
   small {
-    position: absolute;
-    bottom: 200px;
-    right: 20px;
+    float: right;
   }
 }
 </style>
