@@ -6,6 +6,10 @@
     <transition name="component-fade" mode="out-in">
       <component :is="page[pi]"/>
     </transition>
+    <button class="n-elm n-ele-in-0" @click="autochange = !autochange; setTimer()">
+      <div v-if="!autochange" class="play"></div>
+      <div v-else class="pause">||</div>
+    </button>
   </div>
 </template>
 
@@ -28,16 +32,37 @@ export default {
     return {
       page: ['landing', 'cover', 'events', 'invitation', 'people'],
       pi: 0,
-      isOpen: true
+      isOpen: true,
+      autochange: true,
+      timer: null
     }
   },
   methods: {
+    goLeft () {
+      if (this.pi > 0) {
+        this.pi--
+      }
+    },
+    goRight () {
+      if (this.pi < 4) {
+        this.pi++
+      }
+    },
+    setTimer () {
+      if (this.timer) {
+        clearTimeout(this.timer)
+      }
+      this.timer = setInterval(this.change, 4000)
+    },
     change () {
       this.isOpen = true
       const range = 5
-      this.pi++
-      if (this.pi === range) {
-        this.pi = 0
+      if (this.autochange) {
+        this.pi++
+        if (this.pi === range) {
+          this.pi = 0
+        }
+        this.setTimer()
       }
     }
   },
@@ -49,6 +74,37 @@ export default {
 </script>
 
 <style lang="scss">
+
+button {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: 0px solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 15px);
+  padding: 15px;
+}
+
+.play {
+      margin-top: 3px;
+    margin-left: 4px;
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-left: 20px solid #777;
+  border-bottom: 10px solid transparent;
+}
+.pause {
+  font-weight: bold;
+  font-size: 24px;
+  color: #777;
+}
+
 .curve {
   font-family: cursive;
   line-height: 16px;
