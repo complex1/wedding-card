@@ -69,6 +69,7 @@ export default {
   mounted () {
     this.isOpen = localStorage.getItem('isOpen')
     localStorage.setItem('isOpen', true)
+    this.setTimer()
   }
 }
 </script>
