@@ -54,6 +54,14 @@ export default {
       }
       this.timer = setInterval(this.change, 4000)
     },
+    tap () {
+      this.isOpen = true
+      const range = 5
+      this.pi++
+      if (this.pi === range) {
+        this.pi = 0
+      }
+    },
     change () {
       this.isOpen = true
       const range = 5
