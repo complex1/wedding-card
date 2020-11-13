@@ -8,11 +8,11 @@
     </div>
     <div class="n-elm n-ele-in-0 event">
       <h4 class="nm" style="color: #e63946">WEDDING:</h4>
-      <p class="nm">Sunday, 30/11/2020</p>
+      <p class="nm">Monday, 30/11/2020</p>
     </div>
     <div class="n-elm n-ele-in-0 event">
-      <h4 class="nm" style="color: #0077b6">Farewell:</h4>
-      <p class="nm">Monday, 1/12/2020</p>
+      <h4 class="nm" style="color: #0077b6">FAREWELL:</h4>
+      <p class="nm">Tuesday, 1/12/2020</p>
     </div>
     <div class="event">
       <b>Note:&nbsp;</b>
