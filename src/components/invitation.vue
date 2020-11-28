@@ -17,7 +17,7 @@
         <h1 class=" curve">Date & Venue</h1>
         <small>
           <p class="nm">
-            November 30,2020 on 7:30PM at Pushp Restaurant,
+            November 30,2020 on 1:00PM at Pushp Restaurant,
             Pusp Business Park Saradar Patel Ring Road,
             Opp Metro Station, Vastral, Ahmedabad, Gujarat -382418
           </p>
