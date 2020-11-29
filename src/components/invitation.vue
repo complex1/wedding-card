@@ -16,8 +16,8 @@
       <div style="z-index: 10">
         <h1 class=" curve">Date & Venue</h1>
         <small>
-          <p class="nm">
-            November 30,2020 on 1:00PM at Pushp Restaurant,
+          <p class="nm" style="color: #db0505;" >
+            November <b> 30,2020 on 1:00PM </b> at Pushp Restaurant,
             Pusp Business Park Saradar Patel Ring Road,
             Opp Metro Station, Vastral, Ahmedabad, Gujarat -382418
           </p>
